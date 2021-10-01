@@ -23,17 +23,18 @@ Route::get('/login', 'AuthController@login')->name('login');
 Route::get('/logout', 'AuthController@logout');
 Route::post('/postlogin','AuthController@postlogin');
 
+Route::get('pendaftaran','pendaftaranController@index');
+Route::get('pendaftaran/create','pendaftaranController@create');
+Route::post('pendaftaran/create','pendaftaranController@store');
+
+Route::get('pembayaran','pembayaranController@index');
+
+Route::get('pembayaran/pembayaran','pembayaranController@create');
+Route::post('pembayaran/pembayaran','pembayaranController@store');
+
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/dashboard', 'dashboardController@index');
-    Route::get('pendaftaran','pendaftaranController@index');
 
-    Route::get('pendaftaran/create','pendaftaranController@create');
-    Route::post('pendaftaran/create','pendaftaranController@store');
-
-    Route::get('pembayaran','pembayaranController@index');
-
-    Route::get('pembayaran/pembayaran','pembayaranController@create');
-    Route::post('pembayaran/pembayaran','pembayaranController@store');
 
     Route::get('dasboards/viewdaftar','pendaftaranController@store');
 });

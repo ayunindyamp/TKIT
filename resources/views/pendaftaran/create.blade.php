@@ -3,278 +3,289 @@
 @section('content')
 
 
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Identitas Siswa</h4>
+                        <p class="card-description">
+                            Isikan dengan Identitas Siswa
+                        </p>
+                        <form action="{{ url('pendaftaran/create') }}" method="POST" class="forms-sample">
+                            @csrf
+                            <div class="form-group row">
+                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                                <div class="col-sm-9">
+                                    <input name="nama_calon" type="text" class="form-control" id="exampleInputUsername2"
+                                        placeholder="Nama Lengkap">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                <div class="col-sm-9">
+                                    <input name="jenis_kelamin" type="text" class="form-control"
+                                        id="exampleInputUsername2" placeholder="Jenis Kelamin">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Tempat Lahir</label>
+                                <div class="col-sm-9">
+                                    <input name="tempat_lahir" type="text" class="form-control"
+                                        id="exampleInputUsername1" placeholder="Tempat Lahir">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Tanggal Lahir</label>
+                                <div class="col-sm-9">
+                                    <input name="tanggal_lahir" type="date" class="form-control"
+                                        id="exampleInputUsername1" placeholder="Tanggal Lahir">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Agama</label>
+                                <div class="col-sm-9">
+                                    <input name="agama" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="Agama">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1"
+                                    class="col-sm-3 col-form-label">Kewarganegaraan</label>
+                                <div class="col-sm-9">
+                                    <input name="kewarganegaraan" type="text" class="form-control"
+                                        id="exampleInputUsername1" placeholder="Kewarganegaraan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Alamat
+                                    Lengkap</label>
+                                <div class="col-sm-9">
+                                    <input name="alamat" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="Alamat Lengkap">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Tinggal
+                                    Bersama</label>
+                                <div class="col-sm-9">
+                                    <input name="tinggal" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="Tinggal Bersama">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Anak Ke</label>
+                                <div class="col-sm-9">
+                                    <input name="anak_ke" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="Anak Ke">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">Usia</label>
+                                <div class="col-sm-9">
+                                    <input name="usia" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="Usia">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputUsername1" class="col-sm-3 col-form-label">No. HP</label>
+                                <div class="col-sm-9">
+                                    <input name="no_tlp" type="text" class="form-control" id="exampleInputUsername1"
+                                        placeholder="No. HP">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Orang Tua</h4>
+                        <p class="card-description">
+                            Isikan dengan data Ayah
+                        </p>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama Ayah</label>
+                            <div class="col-sm-9">
+                                <input input name="nama_ayah" type="text" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Nama Ayah">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">NIK</label>
+                            <div class="col-sm-9">
+                                <input input name="nik_ayah" type="text" class="form-control" id="exampleInputUsername2"
+                                    placeholder="NIK">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tanggal Lahir</label>
+                            <div class="col-sm-9">
+                                <input input name="tahun_lahir_ayah" type="date" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Tanggal Lahir">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Pendidikan
+                                Terakhir</label>
+                            <div class="col-sm-9">
+                                <input input name="pendidikan_ayah" type="text" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Pendidikan Terakhir">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Pekerjaan</label>
+                            <div class="col-sm-9">
+                                <input input name="pekerjaan_ayah" type="text" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Pekerjaan">
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            Isikan dengan data Ibu
+                        </p>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama Ibu</label>
+                            <div class="col-sm-9">
+                                <input input name="nama_ibu" type="text" class="form-control" id="exampleInputUsername2"
+                                    placeholder="Nama Ibu">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">NIK</label>
+                            <div class="col-sm-9">
+                                <input input name="nik_ibu" type="text" class="form-control" id="exampleInputUsername2"
+                                    placeholder="NIK">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tanggal Lahir</label>
+                            <div class="col-sm-9">
+                                <input input name="tahun_lahir_ibu" type="date" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Tanggal Lahir">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Pendidikan
+                                Terakhir</label>
+                            <div class="col-sm-9">
+                                <input input name="pendidikan_ibu" type="text" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Pendidikan Terakhir">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Pekerjaan</label>
+                            <div class="col-sm-9">
+                                <input input name="pekerjaan_ibu" type="text" class="form-control"
+                                    id="exampleInputUsername2" placeholder="Pekerjaan">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Periodik</h4>
+                        <p class="card-description">
+                            Isi berdasarkan data Siswa
+                        </p>
+                        <form class="forms-sample">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Tinggi Badan</label>
+                                <input input name="tinggi_badan" type="text" class="form-control" id="exampleInputName1"
+                                    placeholder="Tinggi Badan">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Berat Badan</label>
+                                <input input name="berat_badan" type="text" class="form-control" id="exampleInputEmail3"
+                                    placeholder="Berat Badan">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Jarak Tempuh</label>
+                                <input input name="jarak_tempuh" type="text" class="form-control"
+                                    id="exampleInputEmail3" placeholder="Jarak Tempuh">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Jumlah Saudara</label>
+                                <input input name="jumlah_saudara" type="text" class="form-control"
+                                    id="exampleInputEmail3" placeholder="Jumlah Saudara">
+                            </div>
+                            <h4 class="card-title">Register</h4>
+                            <p class="card-description">
+                                Isi berdasarkan data Siswa
+                            </p>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Jenis Pendaftaran</label>
+                                <div class="col-sm-3">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="jenis_pendaftaran"
+                                                id="membershipRadios1" value="siswa_baru" checked>
+                                            Siswa Baru
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="jenis_pendaftaran"
+                                                id="membershipRadios2" value="pindahan">
+                                            Siswa Pindahan
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="jenis_pendaftaran"
+                                                id="membershipRadios2" value="sekolah_lagi">
+                                            Sekolah Lagi
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Tanggal Masuk</label>
+                                <input input name="tanggal_masuk" type="date" class="form-control"
+                                    id="exampleInputEmail3" placeholder="Tanggal Masuk">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">No. Induk Siswa</label>
+                                <input input name="no_induk" type="text" class="form-control" id="exampleInputEmail3"
+                                    placeholder="No Induk Siswa">
+                            </div>
 
-
-    <div class="container">
-        <div class="row justify-content-center align-items-center h-100">
-            <form action="{{ url('pendaftaran/create') }}" method="POST" class="contact-form py-5 px-lg-5">
-                @csrf
-                <h2 class="mb-4 font-weight-medium text-secondary">Identitas Siswa</h2>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Nama Lengkap</label>
-                        <input name="nama_calon" type="subject" id="subject" class="form-control">
-                    </div>
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Jenis Kelamin</label>
-                        <input name="jenis_kelamin" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tempat Lahir</label>
-                        <input name="tempat_lahir" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tanggal Lahir</label>
-                        <input name="tanggal_lahir" type="date" id="subject" class="form-control">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Masuk Rombel</label>
+                                <div class="col-sm-3">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="masuk_rombel"
+                                                id="membershipRadios1" value="a" checked>
+                                            A (4-5 Tahun)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="masuk_rombel"
+                                                id="membershipRadios2" value="b">
+                                            SB (5-6 Tahun)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row form-group mt-4">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Send Message" class="btn btn-primary">
+                                    </div>
+                                </div>
+                        </form>
                     </div>
                 </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Agama</label>
-                        <input name="agama" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Kewarganegaraan</label>
-                        <input name="kewarganegaraan" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Alamat Lengkap</label>
-                        <input name="alamat" type="message" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tinggal Bersama</label>
-                        <input name="tinggal" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Anak Ke</label>
-                        <input name="anak_ke" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Usia</label>
-                        <input name="usia" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">No. Hp</label>
-                        <input name="no_tlp" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-                <h2 class="mb-4 font-weight-medium text-secondary">Orang Tua</h2>
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Nama Ayah</label>
-                        <input name="nama_ayah" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">NIK</label>
-                        <input name="nik_ayah" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tanggal Lahir</label>
-                        <input name="tahun_lahir_ayah" type="date" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Pendidikan</label>
-                        <input name="pendidikan_ayah" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Pekerjaan</label>
-                        <input name="pekerjaan_ayah" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Nama Ibu</label>
-                        <input name="nama_ibu" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">NIK</label>
-                        <input name="nik_ibu" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tanggal Lahir</label>
-                        <input name="tahun_lahir_ibu" type="date" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Pendidikan Terakhir</label>
-                        <input name="pendidikan_ibu" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Pekerjaan</label>
-                        <input name="pekerjaan_ibu" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-                <h2 class="mb-4 font-weight-medium text-secondary">Periodik</h2>
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tinggi Badan</label>
-                        <input name="tinggi_badan" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Berat Badan</label>
-                        <input name="berat_badan" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Jarak Tempuh</label>
-                        <input name="jarak_tempuh" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Jumlah Saudara</label>
-                        <input name="jumlah_saudara" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-                <h2 class="mb-4 font-weight-medium text-secondary">Register</h2>
-                <div class="row form-group">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="text-black" for="jenis_pendaftaran">Jenis Pendaftaran</label>
-                        <select name="jenis_pendaftaran" id="jenis_pendaftaran">
-                            <option value="siswa_baru">Siswa Baru</option>
-                            <option value="pindahan">Siswa Pindahan</option>
-                            <option value="sekolah_lagi">Sekolah Lagi</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                    <label class="text-black" for="masuk_rombel">Masuk Rombel</label>
-                        <select name="jenis_pendaftaran" id="jenis_pendaftaran">
-                            <option value="a">A (4-5 tahun)</option>
-                            <option value="b">Siswa Pindahan</option>
-                            <option value="sekolah_lagi">B (5-6 tahun)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">Tanggal Masuk</label>
-                        <input name="tanggal_masuk" type="date" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="subject">No. Induk</label>
-                        <input name="no_induk" type="subject" id="subject" class="form-control">
-                    </div>
-                </div>
-
-                <div class="row form-group mt-4">
-                    <div class="col-md-12">
-                        <input type="submit" value="Send Message" class="btn btn-primary">
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-lg-6 px-0">
-            <div class="maps-container">
-                <div id="google-maps"></div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-
-    <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-3 py-3">
-                    <h3>SEOGram</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis
-                        in iusto eligendi iure.</p>
-
-                    <div class="social-media-button">
-                        <a href="#"><span class="mai-logo-facebook-f"></span></a>
-                        <a href="#"><span class="mai-logo-twitter"></span></a>
-                        <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-                        <a href="#"><span class="mai-logo-instagram"></span></a>
-                        <a href="#"><span class="mai-logo-youtube"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Company</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Help & Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Contact Us</h5>
-                    <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    <a href="#" class="footer-link">+00 1122 3344 5566</a>
-                    <a href="#" class="footer-link">seogram@temporary.com</a>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Newsletter</h5>
-                    <p>Get updates, news or events on your mail.</p>
-                    <form action="#">
-                        <input type="text" class="form-control" placeholder="Enter your email..">
-                        <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-
-            <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a
-                    href="https://macodeid.com/" target="_blank">MACode ID</a></p>
-        </div>
-        @endsection
+</div>
+@endsection

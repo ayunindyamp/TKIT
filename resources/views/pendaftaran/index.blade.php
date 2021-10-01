@@ -2,129 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pendaftaran Siswa Baru</title>
-
-    <link rel="stylesheet" href="../assets/css/maicons.css">
-
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
-    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
-    <link rel="stylesheet" href="../assets/css/theme.css">
-
+    <!-- plugins:css -->
+    <link rel="stylesheet" href={{asset("assets/vendors/ti-icons/css/themify-icons.css")}}>
+    <link rel="stylesheet" href={{asset("assets/vendors/base/vendor.bundle.base.css")}}>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href={{asset("assets/css/style.css")}}>
+    <!-- endinject -->
+    <link rel="shortcut icon" href={{asset("assets/images/favicon.png")}} />
 </head>
 
 <body>
-    <table>
-        <tr>
-            <th>Nama</th>
-        </tr>
-        @foreach($data_pendaftaran as $pendaftaran)
-        <tr>
-            <td>{{$pendaftaran->nama_calon}}</td>
-        </tr>
-        @endforeach
-    </table>
-    <!-- Back to top button -->
-    <div class="back-to-top"></div>
-
-    <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="300">
-            <div class="container">
-                <a href="#" class="navbar-brand">TKTI<span class="text-primary"> Buah Hati Kita.</span></a>
-
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href={{asset("assets/index.html")}}><img src="images/logo.svg"
+                        class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href={{asset("assets/index.html")}}><img
+                        src="images/logo-mini.svg" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="ti-view-list"></span>
                 </button>
-
-                <div class="navbar-collapse collapsed" id="navbarContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ url('pendaftaran/create') }}">Daftar Siswa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ml-lg-2" href="{{ url('pembayaran') }}">Pembayaran</a>
-                        </li>
-                    </ul>
-                </div>
-
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                            id="messageDropdown" href="#" data-toggle="dropdown">
+                            <i class="ti-email mx-0"></i>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                            data-toggle="dropdown">
+                            <i class="ti-bell mx-0"></i>
+                            <span class="count"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-success">
+                                        <i class="ti-info-alt mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Just now
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-warning">
+                                        <i class="ti-settings mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-info">
+                                        <i class="ti-user mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <img src="images/faces/face28.jpg" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="ti-settings text-primary"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item">
+                                <i class="ti-power-off text-primary"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="ti-view-list"></span>
+                </button>
             </div>
         </nav>
 
-        <div class="container">
-
-                            <img src="../assets/img/daftar_siswa.png" alt="">
+        <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                                bootstrapdash.com 2020</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
+                                    href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard
+                                    templates</a> from Bootstrapdash.com</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
                 </div>
-                <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+                <!-- main-panel ends -->
             </div>
+            <!-- page-body-wrapper ends -->
         </div>
-    </header>
+        <!-- container-scroller -->
 
-    <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-3 py-3">
-                    <h3>SEOGram</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis
-                        in iusto eligendi iure.</p>
-
-                    <div class="social-media-button">
-                        <a href="#"><span class="mai-logo-facebook-f"></span></a>
-                        <a href="#"><span class="mai-logo-twitter"></span></a>
-                        <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-                        <a href="#"><span class="mai-logo-instagram"></span></a>
-                        <a href="#"><span class="mai-logo-youtube"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Company</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Help & Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Contact Us</h5>
-                    <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    <a href="#" class="footer-link">+00 1122 3344 5566</a>
-                    <a href="#" class="footer-link">seogram@temporary.com</a>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Newsletter</h5>
-                    <p>Get updates, news or events on your mail.</p>
-                    <form action="#">
-                        <input type="text" class="form-control" placeholder="Enter your email..">
-                        <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-
-            <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a
-                    href="https://macodeid.com/" target="_blank">MACode ID</a></p>
-        </div>
-    </footer>
-
-    <script src="../assets/js/jquery-3.5.1.min.js"></script>
-
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="../assets/js/google-maps.js"></script>
-
-    <script src="../assets/vendor/wow/wow.min.js"></script>
-
-    <script src="../assets/js/theme.js"></script>
-
+        <!-- plugins:js -->
+        <script src={{asset("assets/vendors/base/vendor.bundle.base.js")}}></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page-->
+        <script src={{asset("assets/vendors/chart.js/Chart.min.js")}}></script>
+        <!-- End plugin js for this page-->
+        <!-- inject:js -->
+        <script src={{asset("assets/js/off-canvas.js")}}></script>
+        <script src={{asset("assets/js/hoverable-collapse.js")}}></script>
+        <script src={{asset("assets/js/template.js")}}></script>
+        <script src={{asset("assets/js/todolist.js")}}></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src={{asset("assets/js/dashboard.js")}}></script>
+        <!-- End custom js for this page-->
 </body>
 
 </html>
+
+

@@ -24,6 +24,6 @@ class pendaftaranController extends Controller
     public function store(Request $request)
     {
         \App\pendaftaran::create($request->all());
-        return redirect('dashboard.view');
+        return redirect('pendaftaran');
     }
 }
