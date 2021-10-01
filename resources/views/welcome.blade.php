@@ -62,7 +62,7 @@
                   <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="index.html">SIGN UP</a>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Already have an account? <a href="login.html" class="text-primary">Login</a>
+                  Already have an account? <a href="{{ url('login') }}" class="text-primary">Login</a>
                 </div>
               </form>
             </div>
