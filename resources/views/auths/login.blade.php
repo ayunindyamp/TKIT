@@ -16,7 +16,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href={{asset("assets/css/style.css")}}>
   <!-- endinject -->
-  <link rel="shortcut icon" href={{asset("assets/images/favicon.png" />
+  <link rel="shortcut icon" href={{asset("assets/images/favicon.png") }}/>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
               </div>
               <h4>Welcome back!</h4>
               <h6 class="font-weight-light">Happy to see you again!</h6>
-              <form action="/postlogin" method="POST" class="pt-3">
+              <form action="{{ url('/postlogin') }}" method="POST" class="pt-3">
               @csrf
               <div class="form-group">
                   <label for="exampleInputEmail">Email</label>
