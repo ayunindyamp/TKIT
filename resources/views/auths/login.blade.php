@@ -14,7 +14,7 @@
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href={{asset("assets/css/style.css")}}>
+  <link rel="stylesheet" href={{asset("assets/css/style.css") }} >
   <!-- endinject -->
   <link rel="shortcut icon" href={{asset("assets/images/favicon.png") }}/>
 </head>
@@ -62,7 +62,7 @@
                       Keep me signed in
                     </label>
                   </div>
-                  <a href={{asset("assets/#" class="auth-link text-black">Forgot password?</a>
+                  <a href={{asset("assets/#")}} class="auth-link text-black">Forgot password?</a>
                 </div>
                 <div class="my-3">
                   <input type="submit" value="Login" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
@@ -76,7 +76,7 @@
                   </button>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href={{asset("assets/register-2.html" class="text-primary">Create</a>
+                  Don't have an account? <a href={{ url('') }} class="text-primary">Create</a>
                 </div>
               </form>
             </div>
