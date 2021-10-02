@@ -647,6 +647,7 @@ pre code {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   margin: 0 auto;
+  color:#898798
 }
 .no-gutters {
   margin-right: 0;
