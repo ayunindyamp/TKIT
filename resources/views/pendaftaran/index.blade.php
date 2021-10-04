@@ -33,8 +33,8 @@
                                 <tbody>
                                     <tr>
                                         <td>{{$pendaftaran->nama_calon}}</td>
-                                        <td>{{$pendaftaran->jenis_kelamin}}</td>
-                                        <td>{{$pendaftaran->usia}}</td>
+                                        <td>{{$pendaftaran->alamat}}</td>
+                                        <td>{{$pendaftaran->no_tlp}}</td>
                                         <td><label class="badge badge-danger">Pending</label></td>
                                     </tr>
                                     @endforeach

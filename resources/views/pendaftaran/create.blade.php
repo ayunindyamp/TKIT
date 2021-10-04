@@ -39,20 +39,17 @@
 
                 <div class="navbar-collapse collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Profil</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sites.google.com/view/ikh-buah-hati-kita/home?authuser=0">Profil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Daftar Akun</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ url('pendaftaran/create') }}">Pendaftaran</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('pembayaran/pembayaran') }}">Pembayaran</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ml-lg-2" href="#">Login</a>
                         </li>
                     </ul>
                 </div>

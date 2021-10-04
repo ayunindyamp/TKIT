@@ -20532,6 +20532,12 @@ dl li {
   width: 150px;
 }
 
+.auth .brand-logo1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .auth form .form-group {
   margin-bottom: 1.5rem;
 }
@@ -20594,7 +20600,7 @@ dl li {
 }
 
 .content-wrapper {
-  background: #dddce1;
+  background: #f0efeb;
   padding: 1.5rem 2.5rem;
   width: 100%;
   -webkit-flex-grow: 1;
