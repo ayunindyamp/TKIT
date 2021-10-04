@@ -32,8 +32,8 @@
                                 @foreach($data_pembayaran as $pembayaran)
                                 <tbody>
                                     <tr>
+                                        <td>{{$pembayaran->bank}}</td>
                                         <td>{{$pembayaran->nama}}</td>
-                                        <td>{{$pembeyaran->bank}}</td>
                                         <td>"{{asset($pembayaran->lampiran)}}"</td>
                                         <td><label class="badge badge-danger">Pending</label></td>
                                     </tr>

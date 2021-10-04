@@ -1,25 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use Auth;
+
 use Illuminate\Http\Request;
 
-class AuthController extends Controller
+class viewController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
+    public function index()
     {
-        return view('auths.login');
-    }
-
-    public function logout()
-    {
-        Auth::logout();
-        return direct('/login');
+        return "ini";
     }
 
     /**
@@ -38,12 +32,9 @@ class AuthController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function postlogin(Request $request)
+    public function store(Request $request)
     {
-        if(Auth::attempt($request->only('email','password'))){
-            return redirect('/pendaftaran');
-        }
-        return redirect('/login');
+        //
     }
 
     /**

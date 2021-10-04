@@ -158,7 +158,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ '/dashboard/viewdaftar' }}">
+                        <a class="nav-link" href="{{ url('pendaftaran/index') }}">
                             <i class="ti-layout-list-post menu-icon"></i>
                             <span class="menu-title">Form Pendaftaran</span>
                         </a>

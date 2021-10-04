@@ -72,11 +72,7 @@
                         </p>
                         <form action="{{ url('pembayaran/pembayaran') }}" method="POST" class="forms-sample">
                             @csrf
-                            <div class="form-group">
-                                <label for="exampleInputName1">Atas Nama</label>
-                                <input name="nama" type="text" class="form-control" id="exampleInputName1"
-                                    placeholder="Atas Nama">
-                            </div>
+                            
                             <div class="form-group">
                                 <label for="exampleSelectGender">Bank yang dituju</label>
                                 <select name="bank" class="form-control" id="exampleSelectGender">
@@ -84,6 +80,11 @@
                                     <option value="bri">BRI</option>
                                     <option value="mandiri">Mandiri</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Atas Nama</label>
+                                <input name="nama" type="text" class="form-control" id="exampleInputName1"
+                                    placeholder="Atas Nama">
                             </div>
                             <div class="form-group">
                                 <label class="text-black" for="file">Bukti Pembayaran</label>

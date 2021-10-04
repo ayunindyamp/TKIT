@@ -27,13 +27,18 @@ Route::get('pendaftaran','pendaftaranController@index');
 Route::get('pendaftaran/create','pendaftaranController@create');
 Route::post('pendaftaran/create','pendaftaranController@store');
 
+//Route::get('dashboards/view', 'pendaftaranController@store');
+
+
 Route::get('pembayaran','pembayaranController@index');
 
 Route::get('pembayaran/pembayaran','pembayaranController@create');
 Route::post('pembayaran/pembayaran','pembayaranController@store');
 
 Route::group(['middleware' => 'auth'],function(){
-    Route::get('/dashboard', 'dashboardController@index');
+    Route::get('pembayaran/view', 'pembayaranController@store');
+    Route::get('pendaftaran/index','pendaftaranController@store');
+    Route::get('pendaftaran','pendaftaranController@index');
 
 
     Route::get('dasboards/viewdaftar','pendaftaranController@store');

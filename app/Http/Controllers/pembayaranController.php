@@ -37,7 +37,7 @@ class pembayaranController extends Controller
     public function store(Request $request)
     {
         \App\pembayaran::create($request->all());
-        return redirect('pembayaran');
+        return redirect('/');
     }
 
     /**
