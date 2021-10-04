@@ -335,7 +335,7 @@
                                         <label class="form-check-label">
                                             <input type="radio" class="form-check-input" name="masuk_rombel"
                                                 id="membershipRadios2" value="b">
-                                            SB (5-6 Tahun)
+                                            B (5-6 Tahun)
                                         </label>
                                     </div>
                                 </div>
