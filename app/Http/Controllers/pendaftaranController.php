@@ -53,6 +53,6 @@ class pendaftaranController extends Controller
                 'verifikasi'=>1
             ]);
         }
-        return view('pendaftaran.index');
+        return redirect('pendaftaran');
     }
 }

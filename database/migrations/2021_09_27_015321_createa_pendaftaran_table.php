@@ -91,6 +91,7 @@ class CreateaPendaftaranTable extends Migration
             $table->enum('keluar',['Lulus','Mutasi','Dikeluarkan','Mengundurkan Diri','Putus Sekolah','Wafat','Hilang','Lainnya']);
             $table->date('Tanggal_Keluar');
             $table->string('Alasan_Keluar');
+            $table->tinyInteger('verifikasi')->default('1');
             $table->timestamps();
         });
     }

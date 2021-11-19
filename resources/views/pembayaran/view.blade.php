@@ -34,7 +34,7 @@
                                     <tr>
                                         <td>{{$pembayaran->bank}}</td>
                                         <td>{{$pembayaran->nama}}</td>
-                                        <td>"{{asset($pembayaran->lampiran)}}"</td>
+                                        <td><a href="{{asset($pembayaran->lampiran)}}" class="btn btn-primary">Download</a></td>
                                         <td><label class="badge badge-danger">Pending</label></td>
                                     </tr>
                                     @endforeach

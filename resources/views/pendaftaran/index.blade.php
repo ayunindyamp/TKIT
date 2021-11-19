@@ -47,15 +47,17 @@
                                                 class="badge {{($pendaftaran->verifikasi==1) ? 'badge-warning' : 'badge-success'}}">{{ ($pendaftaran->verifikasi ==1) ?'Pending':'Diterima'}}</label>
                                         </td>
                                         <td>
-                                            @if($pendaftaran->verifikasi==1)
-                                            <button href="/pendaftaran/{{$pendaftaran->id}}/verifikasi" type="button"
-                                                class="btn btn-inverse-success btn-icon btn-sm"> <i
-                                                    class="ti-check"></i> </button>
-                                            @else
-                                            <button href="/pendaftaran/{{$pendaftaran->id}}/verifikasi" type="button"
-                                                class="btn btn-inverse-warning btn-icon btn-sm "> <i
-                                                    class="ti-close"></i></button>
-                                            @endif
+                                            
+                                                @if($pendaftaran->verifikasi==1)
+                                                <a href="/pendaftaran/{{$pendaftaran->id}}/verifikasi"
+                                                    type="button" class="btn btn-inverse-success btn-icon btn-sm"> <i
+                                                        class="ti-check"></i> </a>
+                                                @else
+                                                <a href="/pendaftaran/{{$pendaftaran->id}}/verifikasi"
+                                                    type="button" class="btn btn-inverse-warning btn-icon btn-sm "> <i
+                                                        class="ti-close"></i></a>
+                                                @endif
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -16,6 +16,6 @@ class pendaftaran extends Model
         'Nama_Ibu','NIK_Ibu','Tanggal_Lahir_Ibu','Pendidikan_Ibu','Pekerjaan_Ibu','Penghasilan_Ibu','Berkebutuhan_Khusus_Ibu',
         'Nama_Wali','NIK_Wali','Tanggal_Lahir_Wali','Pendidikan_Wali','Pekerjaan_Wali','Penghasilan_Wali','No_Tlp_Rumah','No_HP','email','Tinggi_Badan',
         'Berat_Badan','Jarak','Jarak_Sebut','Waktu_Tempuh','Jumlah_Saudara','Jenis_Pendaftaran','No_Induk','Tanggal_Masuk','Sekolah_Sebelumnya','Masuk_Rombel',
-        'Tanggal_Keluar','Alasan_Keluar'
+        'Tanggal_Keluar','Alasan_Keluar','verifikasi'
     ];
 }
