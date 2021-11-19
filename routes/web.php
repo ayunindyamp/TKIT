@@ -26,6 +26,9 @@ Route::post('/postlogin','AuthController@postlogin');
 Route::get('pendaftaran','pendaftaranController@index');
 Route::get('pendaftaran/create','pendaftaranController@create');
 Route::post('pendaftaran/create','pendaftaranController@store');
+Route::get('pendaftaran/export','pendaftaranController@export');
+
+Route::get('verifikasi/pendaftaran','verifikasiController@index');
 
 //Route::get('dashboards/view', 'pendaftaranController@store');
 
@@ -37,6 +40,9 @@ Route::post('pembayaran/pembayaran','pembayaranController@store');
 Route::get('pembayaran/view', 'pembayaranController@store');
 Route::get('pendaftaran/index','pendaftaranController@store');
 Route::get('pendaftaran','pendaftaranController@index');
+Route::get('pendaftaran/{id}/detail','pendaftaranController@detail');
+Route::get('pendaftaran/{id}/verifikasi','pendaftaranController@verifikasi');
+
 
 Route::get('dasboards/viewdaftar','pendaftaranController@store');
 

@@ -9,9 +9,13 @@ class pendaftaran extends Model
     protected $table = 'pendaftaran';
     protected $primaryKey='id';
     protected $fillable = [
-        'id','nama_calon','jenis_kelamin','tempat_lahir','tanggal_lahir','agama','kewarganegaraan','alamat',
-        'tinggal','anak_ke','usia','no_tlp','nama_ayah','nik_ayah','tahun_lahir_ayah','pendidikan_ayah',
-        'pekerjaan_ayah','nama_ibu','nik_ibu','tahun_lahir_ibu','pendidikan_ibu','pekerjaan_ibu','tinggi_badan',
-        'berat_badan','jarak_tempuh','jumlah_saudara','jenis_pendaftaran','tanggal_masuk','no_induk','masuk_rombel'
+        'id','Nama_Lengkap','Jenis_Kelamin','NISN','NIK','Tempat_Lahir','Tanggal_Lahir','No_Regis_Akta','Agama','Kewarganegaraan',
+        'Berkebutuhan_Khusus','Alamat_Jalan','RT','RW','Dusun','Kelurahan','Kecamatan','Kode_Pos','Tempat_tinggal','Mode_Transportasi',
+        'Nomor_KKS','Anak_Ke','Penerima_KPS','Layak_PIP','No_KPS','Layak_PIP','Penerima_KIP','No_KIP','Nama_KIP','Terima_Kartu_Fisik',
+        'Alasan','Nama_Ayah','NIK_Ayah','Tanggal_Lahir_Ayah','Pendidikan_Ayah','Pekerjaan_Ayah','Penghasilan_Ayah','Berkebutuhan_Khusus_Ayah',
+        'Nama_Ibu','NIK_Ibu','Tanggal_Lahir_Ibu','Pendidikan_Ibu','Pekerjaan_Ibu','Penghasilan_Ibu','Berkebutuhan_Khusus_Ibu',
+        'Nama_Wali','NIK_Wali','Tanggal_Lahir_Wali','Pendidikan_Wali','Pekerjaan_Wali','Penghasilan_Wali','No_Tlp_Rumah','No_HP','email','Tinggi_Badan',
+        'Berat_Badan','Jarak','Jarak_Sebut','Waktu_Tempuh','Jumlah_Saudara','Jenis_Pendaftaran','No_Induk','Tanggal_Masuk','Sekolah_Sebelumnya','Masuk_Rombel',
+        'Tanggal_Keluar','Alasan_Keluar'
     ];
 }

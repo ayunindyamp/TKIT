@@ -9188,6 +9188,18 @@ pre code {
   margin-left: -15px;
 }
 
+.f {
+
+  float: right;
+  
+  }
+  
+  .clr {
+  
+  clear: both;
+  
+  }
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -10334,7 +10346,7 @@ pre code {
 }
 
 .form-control::placeholder {
-  color: #c9c8c8;
+  color: #800080;
   opacity: 1;
 }
 
