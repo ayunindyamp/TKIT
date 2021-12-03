@@ -32,7 +32,10 @@
               <h6 class="font-weight-light"> dengan email yang telah didaftarkan.</h6>
               <form action="{{ url('/postlogin') }}" method="POST" class="pt-3">
               @csrf
-                <div class="form-group">
+              <div class="form-group">
+                  <input name="name" type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Nama">
+                </div>  
+              <div class="form-group">
                   <input name="email" type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
                 </div>
                 <div class="form-group">

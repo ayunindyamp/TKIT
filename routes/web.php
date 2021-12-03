@@ -38,10 +38,17 @@ Route::get('pembayaran','pembayaranController@index');
 Route::get('pembayaran/pembayaran','pembayaranController@create');
 Route::post('pembayaran/pembayaran','pembayaranController@store');
 Route::get('pembayaran/view', 'pembayaranController@store');
+Route::get('pembayaran','pembayaranController@index');
+Route::get('pembayaran/{id}/verifikasi','pembayaranController@verifikasi');
+
 Route::get('pendaftaran/index','pendaftaranController@store');
 Route::get('pendaftaran','pendaftaranController@index');
 Route::get('pendaftaran/{id}/detail','pendaftaranController@detail');
 Route::get('pendaftaran/{id}/verifikasi','pendaftaranController@verifikasi');
+
+Route::get('register/register','registerController@create');
+Route::post('register/register','registerController@store');
+Route::get('register/view', 'registerController@index');
 
 
 Route::get('dasboards/viewdaftar','pendaftaranController@store');

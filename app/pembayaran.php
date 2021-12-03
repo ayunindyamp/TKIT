@@ -8,5 +8,5 @@ class pembayaran extends Model
 {
     protected $table = 'pembayaran';
     protected $primaryKey='id';
-    protected $fillable = ['id','bank','nama','lampiran'];   
+    protected $fillable = ['id','bank','nama','lampiran','verifikasi'];   
 }

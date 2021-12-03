@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use App\pembayaran;
+use\App\register;
+use\App\user;
 
-class pembayaranController extends Controller
+class registerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class pembayaranController extends Controller
      */
     public function index()
     {
-        $data_pembayaran = \App\pembayaran::all();
-        return view('pembayaran.view',compact('data_pembayaran'));
+        $data_register = \App\register::all();
+        return view('register.view',compact('data_register'));
     }
 
     /**
@@ -24,9 +24,18 @@ class pembayaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('pembayaran.pembayaran');
+        $user = new \App\user;
+        $user->role = 'calon';
+        $user->email = $request->email;
+        $user->name = $request->name;
+        $user->password = $request->password;
+        $user->save();
+
+        $request->request->add(['user_id'=>$user->id]);
+        $register=\App\register::create($request->all());
+        return redirect('register.register')->with('sukses','sukses');
     }
 
     /**
@@ -37,7 +46,7 @@ class pembayaranController extends Controller
      */
     public function store(Request $request)
     {
-        \App\pembayaran::create($request->all());
+        \App\register::create($request->all());
         return redirect('/');
     }
 
@@ -84,23 +93,5 @@ class pembayaranController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function verifikasi($id)
-    {
-        $pembayaran = \App\pembayaran::find($id);
-
-        $verifikasi_sekarang = $pembayaran->verifikasi;
-
-        if($verifikasi_sekarang == 1){
-            \App\pembayaran::find($id)->update([
-                'verifikasi'=>0
-            ]);
-        }else{
-            \App\pembayaran::find($id)->update([
-                'verifikasi'=>1
-            ]);
-        }
-        return redirect('pembayaran');
     }
 }

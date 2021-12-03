@@ -18,6 +18,7 @@ class CreatePembayaranTable extends Migration
             $table->enum('bank', ['bni', 'bri', 'mandiri']);
             $table->string('nama');
             $table->string('lampiran');
+            $table->tinyInteger('verifikasi')->default('1');
             $table->timestamps();
         });
     }

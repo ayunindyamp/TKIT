@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use App\pembayaran;
+use \App\user;
 
-class pembayaranController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class pembayaranController extends Controller
      */
     public function index()
     {
-        $data_pembayaran = \App\pembayaran::all();
-        return view('pembayaran.view',compact('data_pembayaran'));
+        $data_user = \App\user::all();
+        return view('auths.login',compact('data_user'));
     }
 
     /**
@@ -24,9 +23,9 @@ class pembayaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('pembayaran.pembayaran');
+        return view('auths.login');
     }
 
     /**
@@ -37,7 +36,7 @@ class pembayaranController extends Controller
      */
     public function store(Request $request)
     {
-        \App\pembayaran::create($request->all());
+        \App\user::create($request->all());
         return redirect('/');
     }
 
@@ -84,23 +83,5 @@ class pembayaranController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function verifikasi($id)
-    {
-        $pembayaran = \App\pembayaran::find($id);
-
-        $verifikasi_sekarang = $pembayaran->verifikasi;
-
-        if($verifikasi_sekarang == 1){
-            \App\pembayaran::find($id)->update([
-                'verifikasi'=>0
-            ]);
-        }else{
-            \App\pembayaran::find($id)->update([
-                'verifikasi'=>1
-            ]);
-        }
-        return redirect('pembayaran');
     }
 }

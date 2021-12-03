@@ -49,7 +49,7 @@
                                         <td>
                                             
                                                 @if($pendaftaran->verifikasi==1)
-                                                <a href="/pendaftaran/{{$pendaftaran->id}}/verifikasi"
+                                                <a onclick="return confirm('Apakah anda yakin menerima {{$pendaftaran->Nama_Lengkap}}?')" href="/pendaftaran/{{$pendaftaran->id}}/verifikasi"
                                                     type="button" class="btn btn-inverse-success btn-icon btn-sm"> <i
                                                         class="ti-check"></i> </a>
                                                 @else
