@@ -40,7 +40,7 @@
                 <div class="navbar-collapse collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://sites.google.com/view/ikh-buah-hati-kita/home?authuser=0">Profil</a>
+                            <a target="_blank" class="nav-link" href="https://tkit-buahhatikita.sch.id">Profil TKIT</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Daftar Akun</a>

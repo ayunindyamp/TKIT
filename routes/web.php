@@ -11,17 +11,20 @@
 |
 */
 
+use App\Http\Controllers\AuthController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login', 'AuthController@login')->name('login');
 Route::get('/logout', 'AuthController@logout');
-Route::post('/postlogin','AuthController@postlogin');
+// Route::post('/postlogin','AuthController@postlogin');
+Route::post('/postlogin', [AuthController::class, 'postlogin']);
 
 Route::get('pendaftaran','pendaftaranController@index');
 Route::get('pendaftaran/create','pendaftaranController@create');
